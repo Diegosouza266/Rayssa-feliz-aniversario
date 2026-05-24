@@ -259,3 +259,54 @@ footer {
     color: var(--cor-neon-azul);
     text-shadow: 0 0 10px var(--cor-neon-azul);
 }
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .frase-especial p {
+        font-size: 18px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .perfil-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .foto-perfil,
+    .foto-romantica {
+        width: 90%;
+        height: auto;
+    }
+
+    .texto-jornada {
+        max-width: 90%;
+    }
+
+    .texto-jornada h2 {
+        font-size: 42px;
+    }
+
+    .texto-jornada p {
+        font-size: 20px;
+    }
+
+    .grid-galeria {
+        grid-template-columns: 1fr;
+    }
+
+    #hero {
+        padding: 100px 20px;
+    }
+
+    #btn-surpresa {
+        width: 90%;
+        font-size: 18px;
+    }
+}
