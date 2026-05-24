@@ -1,0 +1,261 @@
+/* 1. RESET BÁSICO E VARIÁVEIS DE COR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --cor-fundo: #0a0514; /* O tom escuro da noite urbana */
+    --cor-neon-rosa: #ff00ff;
+    --cor-neon-azul: #00d2ff;
+    --cor-texto: #ffffff;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    /* Essa barra de rolagem customizada dá um toque premium */
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-neon-azul) var(--cor-fundo);
+}
+
+/* 2. O CABEÇALHO COM A LOGO BRILHANTE */
+header {
+    display: flex;
+    justify-content: center; /* Mantém o conteúdo centralizado */
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(10, 5, 20, 0.7);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo {
+    /* Aumenta o tamanho da fonte */
+    font-size: 3rem; 
+    font-weight: 800;
+    color: var(--cor-neon-azul);
+    text-shadow: 0 0 10px var(--cor-neon-azul);
+    
+    /* Força o alinhamento absoluto no centro */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Isso garante que ele brilhe bem */
+    text-shadow: 0 0 10px #00d2ff, 0 0 20px #00d2ff;
+}
+
+/* Escondendo os links do menu por enquanto para focar no visual principal */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: var(--cor-neon-rosa);
+}
+
+/* 3. A SEÇÃO HERO (A MÁGICA ACONTECE AQUI) */
+#hero {
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    /* ATENÇÃO: coloque o nome exato da sua imagem do carro aqui embaixo */
+    background-image: url('imagens/carro-costas.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Uma camada escura por cima da foto para o texto ler perfeitamente */
+    box-shadow: inset 0 0 0 2000px rgba(10, 5, 20, 0.5);
+}
+
+.hero-conteudo h1 {
+    font-size: 4rem;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    /* O famoso efeito néon rosa da frase! */
+    text-shadow: 
+        0 0 5px #fff, 
+        0 0 10px #fff, 
+        0 0 20px var(--cor-neon-rosa), 
+        0 0 40px var(--cor-neon-rosa),
+        0 0 80px var(--cor-neon-rosa);
+}
+
+/* O Botão Surpresa */
+#btn-surpresa {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-texto);
+    background-color: transparent;
+    border: 2px solid var(--cor-neon-rosa);
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--cor-neon-rosa), inset 0 0 15px var(--cor-neon-rosa);
+    transition: 0.4s;
+}
+
+#btn-surpresa:hover {
+    background-color: var(--cor-neon-rosa);
+    box-shadow: 0 0 30px var(--cor-neon-rosa), inset 0 0 30px var(--cor-neon-rosa);
+}
+
+/* 4. SEÇÃO A JORNADA (Sobre Ela) */
+#sobre {
+    padding: 100px 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.perfil-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1000px;
+    /* Um fundo levemente transparente para destacar o texto */
+    background: rgba(255, 255, 255, 0.05); 
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.1);
+}
+
+.foto-perfil {
+    width: 350px; /* Tamanho da foto principal */
+    border-radius: 15px;
+    /* O efeito néon azul em volta da foto dela */
+    box-shadow: 0 0 15px var(--cor-neon-azul), 0 0 30px var(--cor-neon-azul);
+}
+.foto-perfil,.foto-jornada {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+
+
+    border-radius: 20px;
+}
+
+    .foto-jornada{
+        
+        
+        box-shadow: 0 0 15px var(--cor-neon-rosa), 0 0 30px var(--cor-neon-rosa);}
+.texto-jornada h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--cor-neon-azul);
+    text-shadow: 0 0 10px var(--cor-neon-azul);
+}
+
+.texto-jornada img{
+
+width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+    border-radius: 10px;
+    transition: 0.3s; /* Deixa o efeito do mouse mais suave */
+    border: 2px solid transparent;
+
+transform: scale(1.05); /* Dá um zoom de leve */
+    border: 2px solid var(--cor-neon-rosa);
+    box-shadow: 0 0 15px var(--cor-neon-rosa);
+}
+.texto-jornada p {
+   
+    line-height: 1.8;
+    color: #f5f5f5;
+
+    margin-bottom: 25px;
+
+    opacity: 0.9;
+}
+.frase-especial {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.frase-especial p {
+    font-size: 30px;
+
+    color: #f3f3f3;
+
+    font-weight: 305;
+
+    letter-spacing: 2px;
+
+    line-height: 1.6;
+
+    text-shadow:
+    0 0 15px rgba(5, 5, 5, 0.2);
+
+    opacity: 1.9px;
+}
+/* 5. SEÇÃO GALERIA */
+#galeria {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-galeria {
+    display: grid;
+    /* Aqui dizemos para criar 3 colunas do mesmo tamanho */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* O espaço entre as fotos */
+    max-width: 1000px;
+}
+
+.item-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+    border-radius: 10px;
+    transition: 0.3s; /* Deixa o efeito do mouse mais suave */
+    border: 2px solid transparent;
+}
+
+/* Efeito quando passar o mouse em cima das fotos da galeria */
+.item-galeria img:hover {
+    transform: scale(1.05); /* Dá um zoom de leve */
+    border: 2px solid var(--cor-neon-rosa);
+    box-shadow: 0 0 15px var(--cor-neon-rosa);
+}
+
+/* 6. RODAPÉ */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
+}
+
+.redes-sociais {
+    margin-bottom: 20px;
+}
+
+.icone {
+    color: var(--cor-texto);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.icone:hover {
+    color: var(--cor-neon-azul);
+    text-shadow: 0 0 10px var(--cor-neon-azul);
+}
